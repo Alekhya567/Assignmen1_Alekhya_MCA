@@ -1,0 +1,19 @@
+Method 1:
+class Solution{
+    static int addition(int A, int B){
+        // code here
+        return A+B;
+    }
+}
+Method 2:
+class Solution{
+    static int addition(int a, int b){
+        // code here
+        while (b != 0) {
+            int carry = a & b;
+            a = a ^ b;         
+            b = carry << 1;   
+        }
+        return a;
+    }
+}
