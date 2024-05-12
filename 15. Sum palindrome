@@ -1,0 +1,27 @@
+class Solution
+{
+     long  revNum(long N)
+    {
+        long rev=0;
+        while(N!=0)
+        {
+            long rem=N%10;
+            rev=rev*10+rem;
+            N/=10;
+        }
+        return rev;
+    }
+   
+    public long isSumPalindrome(long n)
+    {  
+        for(long i=0;i<=5;i++)
+        {
+            if (n==revNum(n))
+                return n;
+            n+=revNum(n);
+        }
+        return -1;
+ 
+
+    }
+}
