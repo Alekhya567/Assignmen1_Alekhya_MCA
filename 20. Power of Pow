@@ -1,0 +1,8 @@
+class Solution
+{
+     public double sum_of_square_evenNumbers(int n) {
+        // Ensure the exponent is even
+        return 4 * ((n * (n + 1) * (2 * n + 1)) / 6);
+                     
+     }    
+    }
