@@ -1,0 +1,13 @@
+class Solution {
+    public static long seriesSum(int n) {
+        long sum=0;
+//take sum as long to make this program work for integers larger than int range
+        for (int i=1;i<=n;i++)
+//type cast i to long to make code work
+         sum+=(long)i;
+        
+     
+    return sum;
+        
+    }
+}
