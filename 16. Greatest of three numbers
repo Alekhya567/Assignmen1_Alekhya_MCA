@@ -1,0 +1,14 @@
+class Solution {
+    int greatestOfThree(int A, int B, int C) {
+        int greatest = A;
+
+        if (B > greatest) {
+            greatest = B;
+        }
+
+        if (C > greatest) {
+            greatest = C;
+        }
+
+        return greatest;
+    }
