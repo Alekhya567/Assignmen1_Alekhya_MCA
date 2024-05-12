@@ -1,0 +1,20 @@
+class Solution
+{
+    public int find_median(int[] v)
+    {
+//sort functions sorts the array
+      Arrays.sort(v);
+//length function finds length of the array
+      int n=v.length;
+      int median;
+      
+ 
+        // if v has odd number of elements
+        if (n % 2 != 0)
+            median=v[n / 2];
+        // if v has even number of elements
+        else
+            median=(v[(n-1)/2]+v[n/2])/2;
+        return median;
+    }
+}
