@@ -1,0 +1,15 @@
+
+class Solution:
+	def streamAvg(self, arr, n):
+		# code heregeeksforgeeks
+
+		
+	    average = 0
+		#iterating over the array
+		for i in range(n):
+			#calculating average by summing up all elements
+			average +=float(arr[i])
+			#appending the average to the answer array
+			arr[i]= float(average/(i+1))
+		return arr;
+		
