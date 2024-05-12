@@ -1,0 +1,16 @@
+class Solution
+{
+    public long reverse_digit(long n)
+    {
+    //to match type of n have taken rev_num as long
+         long rev_num = 0; 
+    //if n<=0 no more digits to check, while is checking only unchecked digits
+        while (n > 0) { 
+      //need to do rev_num*10 as prev rev_num no longer in units place 
+            rev_num = rev_num * 10 + n % 10; 
+            //to delete checked digit n= n/10
+            n = n / 10; 
+        } 
+        return rev_num; 
+    }
+}
