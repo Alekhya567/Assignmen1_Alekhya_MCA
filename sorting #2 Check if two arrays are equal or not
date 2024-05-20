@@ -1,0 +1,13 @@
+class Solution{
+    //Function to check if two arrays are equal or not.
+    public static boolean check(long A[],long B[],int N)
+    {
+    //sort array A
+        Arrays.sort(A);
+    //sort array B
+        Arrays.sort(B);
+     //Now both arrays are arranged in ascending order 
+     //if both arrays has same elements and same number of elements Arrays.equals() returns 1 otherwise it returns 0
+        return Arrays.equals(A,B);
+    }
+}
