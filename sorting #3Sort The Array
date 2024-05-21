@@ -1,0 +1,10 @@
+class Solution 
+{ 
+    int[] sortArr(int[] arr, int n) 
+    { 
+    //Arrays class has sort method that sorts array in ascending order 
+        Arrays.sort(arr);
+    //return sorted array
+        return arr;
+    }
+} 
