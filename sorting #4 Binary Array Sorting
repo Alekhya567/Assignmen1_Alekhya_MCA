@@ -1,0 +1,14 @@
+
+
+class Solution
+{
+   
+    static void binSort(int A[], int N)
+    {
+        // sort function sorts array in ascending order
+        Arrays.sort(A);
+        
+     
+    }
+}
+
