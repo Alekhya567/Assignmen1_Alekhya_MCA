@@ -1,0 +1,40 @@
+
+
+class Solution
+{
+    
+    public void sortIt(long arr[], long n)
+    {
+        //1.Typecast m to int as array index should be integer type
+        
+        int m= (int)n;
+        long[] arr_odd = new long[m];
+        int i,even=m-1,odd=0,merge=0,display=0;
+
+
+
+        for(i=m-1;i>=0;i--){
+//2. If array element is even then add it backwards of array
+            if(arr[i]%2==0)
+             arr[even--]=arr[i];
+            else{
+//3. If array element is odd then2 copy it to arr_odd array
+             arr_odd[odd++]=arr[i];
+//position of array where element ids odd to be 0
+             arr[i]=0;
+             even--;
+// even to be even-1 to place next even number in its position
+             
+}
+        }
+//sort both arrays
+     Arrays.sort(arr);
+ Arrays.sort(arr_odd);
+//run loop for number of odd elements and add them from back side of odd_array
+//to the array from first
+  i=m-1; 
+ for(int k=0;k<=odd-1;k++)
+         arr[merge++]=arr_odd[i--];
+ 
+    }
+}
