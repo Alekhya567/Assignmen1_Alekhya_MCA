@@ -1,0 +1,23 @@
+
+
+            
+
+class Complete{
+    public static int check (int arr[], int[] brr, int n) {
+//sort arrays in ascending order if they are eual then will be in same order .
+        Arrays.sort(arr);
+        Arrays.sort(brr);
+//Traverse array elements 
+        for(int i=0;i<n;i++){
+//check if both array elements at index i are equal or not
+         if(arr[i]!=brr[i])
+//at any index both array elements are not equal then return 0
+          return 0;
+        }
+//if all elements of first afrray equal to all elements of second array then return 1
+        return 1;
+        
+    }
+    
+    
+}
