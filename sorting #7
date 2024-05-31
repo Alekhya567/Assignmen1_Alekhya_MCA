@@ -1,0 +1,24 @@
+
+
+class Solution
+{
+    public int minimum_difference(int[] nums)
+    {
+    //sort array so that we get positive difference 
+        Arrays.sort(nums);
+    //set min to largest inetger possible
+        int min = Integer.MAX_VALUE;
+    //traverse the elements and nums.length gives us array length
+        for(int i=1;i<nums.length;i++){
+    //get difference of element and previous element , to access 1st
+    //element as well start with i as 1
+           int dif=nums[i]-nums[i-1];
+    //find min difference
+            if(dif<min)
+             min=dif;
+        }
+    //return min difference 
+        return min;
+        
+    }
+}
