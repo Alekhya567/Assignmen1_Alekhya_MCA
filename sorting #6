@@ -1,0 +1,12 @@
+class Solution {
+    int maxProduct(int arr[], int n) {
+    //sort array
+      Arrays.sort(arr);
+    //n1 to access last element
+      int n1=n-1;
+      //if arary sorted max element is last and next max element 
+      //is next element of last from back of array
+      //first two max numbers give max product of two numbers 
+      return arr[n1]*arr[n1-1];
+    }
+}
