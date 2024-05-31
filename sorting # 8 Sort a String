@@ -1,0 +1,15 @@
+class Solution 
+{ 
+    String sort(String s) 
+    {
+    //change string to character array as sort takes only arrays
+       char tempArray[] = s.toCharArray();
+
+        // Sorting temp array using 
+        Arrays.sort(tempArray);
+
+        // Returning new sorted temparray by converting it back to string 
+        return new String(tempArray);
+
+    }
+} 
