@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isPossible(long a[], long b[], int n, long k) {
+    //1.sort arrays in ascending order
+        Arrays.sort(a);
+        Arrays.sort(b);
+        int j=0;
+    //2.our condition is a[i]+b[i]>=K so that largest numbers and small number combination is possible
+        for (int i=n-1;i>=0;i--)
+         {
+    //3. check condition if fails return false
+             if(a[j++]+b[i]<k)
+              return false;
+              
+         }
+    //4. if condition satisfies return true
+         return true;
+    }
+}
