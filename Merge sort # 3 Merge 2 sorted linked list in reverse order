@@ -1,0 +1,72 @@
+/* Structure of the node*/
+/* class Node
+{
+	int data;
+	Node next;
+	
+	Node(int d)//constructor
+	{
+		data = d;
+		next = null;
+	}
+} */
+
+class GfG
+{
+    Node reverse(Node head)//reverses the given list to descending order
+    {
+        Node curr=head;
+        Node prev=null;
+        while(curr!=null)
+        {
+//store curr.next address in temporary to retain it
+            Node temp=curr.next;
+//point current node to previous
+            curr.next=prev;
+//set current node as prev
+            prev=curr;
+//set current node to temp
+            curr=temp;
+        }
+//return prev as it is new head
+        return prev;
+    }
+    Node mergeResult(Node node1, Node node2)
+/* Merges two lists to ascending order and then reverses them to descending 
+order and reverses the list */
+    {
+//take dummy node with data 0 and next to be null
+	Node dummy= new Node(0);
+//set tail to dummy
+	Node tail=dummy;
+	while(true)
+	{
+/*if 1st list is empty then we just need to reverse second list no need
+to merge*/
+	    if(node1==null){
+	    tail.next=node2;
+	        break;
+	    }
+/*if 2nd list is empty then we just need to reverse first list no need
+to merge*/
+	    if(node2==null){
+	    tail.next=node1;
+	    break;
+	    }
+//merge two lists in ascending order and move corresponding head
+	    if(node1.data<=node2.data){
+	    tail.next=node1;
+	    node1=node1.next;
+	    }
+	    else
+	    {
+	        tail.next=node2;
+	        node2=node2.next;
+	    }
+//move tail to tail.next
+	    tail=tail.next;
+	}
+//reverse merged list as it is in ascending to descending and return it 
+	return reverse(dummy.next);
+    }
+}
