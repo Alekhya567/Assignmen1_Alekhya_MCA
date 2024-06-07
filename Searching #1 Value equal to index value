@@ -1,0 +1,13 @@
+class Solution {
+    ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
+//create a new list with object list
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for(int i=0;i<n;i++)
+         {
+//add every object satisfying condition to list
+             if(arr[i]==i+1)
+             list.add(arr[i]);
+         }
+//return list by returning its object
+         return list;
+        
