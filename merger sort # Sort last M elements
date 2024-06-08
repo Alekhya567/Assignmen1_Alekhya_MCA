@@ -1,0 +1,8 @@
+class Solution
+{
+    public void sortLastMelements(int[] nums, int n, int m)
+    {
+    //sorts from nums[n] to nums[n+m-1] (last m elements are sorted
+             Arrays.sort(nums,n,n+m);
+    }
+}
