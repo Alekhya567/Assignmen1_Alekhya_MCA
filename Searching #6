@@ -1,0 +1,17 @@
+
+
+
+// User function Template for Java
+class Solution {
+    public static int search(int n, int k, int[] arr) {
+//traverse array elements and return index(started from 1 ) if element is present
+.// this will return first occurence of element position
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]==k)
+             return i+1;
+        }
+//if no element then return -1
+        return -1;
+    }
+}
